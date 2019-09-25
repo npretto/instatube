@@ -1,24 +1,25 @@
 import React from 'react'
-import logo from './logo.svg'
+import { Col, Row } from 'antd'
+import { useDispatch } from 'react-redux'
+import SearchBar from './components/SearchBar'
+import 'antd/dist/antd.css'
 import './App.css'
+import { search } from './features/search'
 
 function App() {
+  const dispatch = useDispatch()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Row>
+        <Col
+          xs={{ span: 24, offset: 0 }}
+          md={{ span: 20, offset: 2 }}
+          lg={{ span: 18, offset: 3 }}
         >
-          Learn React
-        </a>
-      </header>
+          <SearchBar onChange={text => dispatch(search(text))} />
+        </Col>
+      </Row>
     </div>
   )
 }
