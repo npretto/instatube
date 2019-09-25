@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.23.4",
+    "lodash.debounce": "^4.0.8",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -11,7 +12,9 @@
     "react-scripts": "3.1.2",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
-    "redux-starter-kit": "^0.7.0"
+    "redux-starter-kit": "^0.7.0",
+    "use-lodash-debounce": "^1.1.0",
+    "youtube-api-v3-search": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -56,6 +59,6 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^3.0.5",
     "lint-staged": "^9.3.0",
-    "prettier": "^1.18.2"
+    "prettier": "1.18.2"
   }
 }
